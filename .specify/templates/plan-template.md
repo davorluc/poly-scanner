@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- **TypeScript Strict Mode**: Is strict mode enabled in `tsconfig.json`?
+- **Linting**: Are ESLint and Prettier configured and passing?
+- **Unit Testing**: Does the plan include unit tests with Vitest to achieve ≥80% coverage?
+- **CLI Outputs**: Does the design for CLI outputs prioritize clarity and consistency?
+- **Optimized Data Fetching**: Is the data fetching and simulation logic designed for efficiency?
 
 ## Project Structure
 
