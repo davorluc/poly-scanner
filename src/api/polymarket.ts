@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { config } from '../utils/config';
-import { logger } from '../utils/logger';
+import config from '../utils/config.js';
+import logger from '../utils/logger.js';
 
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 1000; // 1 second
@@ -44,4 +44,21 @@ export const getMarket = async (id: string): Promise<Market | null> => {
   }
   logger.error('Failed to fetch market after multiple retries.');
   return null;
+};
+
+export const watchMarkets = async (callback: (markets: Market[]) => void, interval: number): Promise<() => void> => {
+  let isWatching = true;
+
+  const fetchAndCallback = async () => {
+    if (!isWatching) return;
+    const markets = await getMarkets();
+    callback(markets);
+    setTimeout(fetchAndCallback, interval);
+  };
+
+  fetchAndCallback();
+
+  return () => {
+    isWatching = false;
+  };
 };
