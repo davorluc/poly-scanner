@@ -70,8 +70,8 @@
 
 ### Implementation for User Story 3
 
-- [ ] T015 [US3] Implement a reporter module in `src/reporter/reporter.ts` for generating console and CSV reports
-- [ ] T016 [US3] Add a `--output` option to the `simulate` command to save the report to a file
+- [x] T015 [US3] Implement a reporter module in `src/reporter/reporter.ts` for generating console and CSV reports
+- [x] T016 [US3] Add a `--output` option to the `simulate` command to save the report to a file
 - [ ] T017 [P] [US3] (Optional) Add a `--chart` option to generate a chart of the results (e.g., using a library like `chart.js-node`)
 
 **Checkpoint**: All user stories should now be independently functional
@@ -86,10 +86,10 @@
 
 ### Implementation for User Story 4
 
-- [ ] T018 [US4] Implement a CSV reader in `src/utils/csv.ts` to load historical market data
-- [ ] T019 [US4] Modify the `simulate` command to accept a `--file` option for historical data
-- [ ] T020 [US4] Implement a real-time data fetching mechanism in the `Polymarket API client` (`src/api/polymarket.ts`)
-- [ ] T021 [US4] Add a `--live` option to the `simulate` command to run simulations with near-real-time data
+- [x] T018 [US4] Implement a CSV reader in `src/utils/csv.ts` to load historical market data
+- [x] T019 [US4] Modify the `simulate` command to accept a `--file` option for historical data
+- [x] T020 [US4] Implement a real-time data fetching mechanism in the `Polymarket API client` (`src/api/polymarket.ts`)
+- [x] T021 [US4] Add a `--live` option to the `simulate` command to run simulations with near-real-time data
 
 ---
 
@@ -97,8 +97,8 @@
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T022 [P] Add comprehensive unit tests for all modules in `tests/unit/` to achieve >= 80% coverage
-- [ ] T023 [P] Add integration tests in `tests/integration/` for the CLI commands
+- [x] T022 [P] Add comprehensive unit tests for all modules in `tests/unit/` to achieve >= 80% coverage
+- [x] T023 [P] Add integration tests in `tests/integration/` for the CLI commands
 - [ ] T024 [P] Create a `README.md` with detailed usage instructions and examples
 - [ ] T025 [FR-010] Implement comprehensive command-line error handling and user-friendly messages
 - [ ] T026 [Constitution IV] Ensure overall CLI output clarity, consistency, and readability
