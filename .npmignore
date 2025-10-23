@@ -1,0 +1,8 @@
+# Tests
+tests/
+# Specs
+specs/
+# Config files
+.eslint*
+.prettier*
+.vscode/
