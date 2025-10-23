@@ -1,5 +1,5 @@
-import { Market } from '../api/polymarket';
-import { logger } from '../utils/logger';
+import type { Market } from '../api/polymarket.js';
+import logger from '../utils/logger.js';
 
 export interface Trade {
   market: Market;
@@ -10,16 +10,16 @@ export interface Trade {
 
 export const simulateTrade = (market: Market, investment: number): Trade | null => {
   const prices = market.outcomes.map(o => o.price);
-  const inversePricesSum = prices.reduce((sum, price) => sum + (1 / price), 0);
+  const pricesSum = prices.reduce((sum, price) => sum + price, 0);
 
-  if (inversePricesSum >= 1) {
+  if (pricesSum <= 1) {
     logger.warn('No arbitrage opportunity found for this market.');
-    const loss = investment - (investment / inversePricesSum);
+    const loss = investment - (investment * pricesSum);
     logger.warn(`Simulated loss: $${loss.toFixed(2)}`);
     return null;
   }
 
-  const profit = (investment / inversePricesSum) - investment;
+  const profit = (investment * pricesSum) - investment;
   const roi = (profit / investment) * 100;
 
   return {
