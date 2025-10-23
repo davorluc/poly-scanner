@@ -28,6 +28,8 @@ export const getMarkets = async (): Promise<Market[]> => {
   }
   logger.error('Failed to fetch markets after multiple retries.');
   return [];
+};
+
 export const getMarket = async (id: string): Promise<Market | null> => {
   let retries = 0;
   while (retries < MAX_RETRIES) {
