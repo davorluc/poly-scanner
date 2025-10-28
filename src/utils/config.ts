@@ -1,5 +1,5 @@
 const config = {
-  polymarketApiUrl: 'https://strapi-matic.polymarket.com/markets',
+  polymarketApiUrl: 'https://gamma-api.polymarket.com/markets',
 };
 
 export default config;

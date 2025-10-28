@@ -1,7 +1,11 @@
+import { colors } from './colors.js';
+
 const logger = {
-  log: (...args: unknown[]) => console.log(...args),
-  error: (...args: unknown[]) => console.error(...args),
-  warn: (...args: unknown[]) => console.warn(...args),
+  log: (...args: unknown[]) => console.log(colors.primary(...args)),
+  error: (...args: unknown[]) => {
+    console.error(colors.error('Error:', ...args));
+  },
+  warn: (...args: unknown[]) => console.warn(colors.warning(...args)),
 };
 
 export default logger;

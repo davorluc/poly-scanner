@@ -15,10 +15,10 @@ export const findArbitrageOpportunities = (markets: Market[]): ArbitrageOpportun
     const prices = market.outcomes.map(o => o.price);
     const pricesSum = prices.reduce((sum, price) => sum + price, 0);
 
-    if (pricesSum > 1) {
-      const investment = 100; // Example investment
-      const profit = (investment * pricesSum) - investment;
-      const roi = (profit / investment) * 100;
+    if (pricesSum < 1) { // Arbitrage opportunity (underround market)
+      const totalInvestment = 100; // Example total investment
+      const profit = totalInvestment * (1 / pricesSum - 1);
+      const roi = (profit / totalInvestment) * 100;
 
       const isLowLiquidity = market.outcomes.some(o => o.price * LIQUIDITY_THRESHOLD < 1);
 
