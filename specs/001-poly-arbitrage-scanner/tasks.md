@@ -72,7 +72,7 @@
 
 - [x] T015 [US3] Implement a reporter module in `src/reporter/reporter.ts` for generating console and CSV reports
 - [x] T016 [US3] Add a `--output` option to the `simulate` command to save the report to a file
-- [ ] T017 [P] [US3] (Optional) Add a `--chart` option to generate a chart of the results (e.g., using a library like `chart.js-node`)
+- [x] T017 [P] [US3] (Optional) Add a `--chart` option to generate a chart of the results (e.g., using a library like `chart.js-node`)
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -99,10 +99,10 @@
 
 - [x] T022 [P] Add comprehensive unit tests for all modules in `tests/unit/` to achieve >= 80% coverage
 - [x] T023 [P] Add integration tests in `tests/integration/` for the CLI commands
-- [ ] T024 [P] Create a `README.md` with detailed usage instructions and examples
-- [ ] T025 [FR-010] Implement comprehensive command-line error handling and user-friendly messages
-- [ ] T026 [Constitution IV] Ensure overall CLI output clarity, consistency, and readability
-- [ ] T027 [Constitution V] Optimize data fetching and simulation logic for efficiency
+- [x] T024 [P] Create a `README.md` with detailed usage instructions and examples
+- [x] T025 [FR-010] Implement comprehensive command-line error handling and user-friendly messages
+- [x] T026 [Constitution IV] Ensure overall CLI output clarity, consistency, and readability
+- [x] T027 [Constitution V] Optimize data fetching and simulation logic for efficiency
 
 ---
 
