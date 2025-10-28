@@ -1,5 +1,11 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { execSync } from 'child_process';
+
+vi.mock('axios', () => ({
+  default: {
+    get: vi.fn().mockResolvedValue({ data: [] }),
+  },
+}));
 
 describe('cli', () => {
   it('should run the scan command', () => {
