@@ -1,5 +1,9 @@
 # Polymarket Arbitrage Scanner
 
+## Disclaimer
+
+This is purely a proof of concept simulator. Using the data provided by this repo could result in legal consequences depending on where you live.
+
 A CLI tool to scan for arbitrage opportunities on Polymarket.
 
 ## Installation
