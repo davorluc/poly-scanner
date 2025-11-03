@@ -1,4 +1,7 @@
 .gemini/
+.gemini/commands
+specs/
+.specify/
 # Node.js
 node_modules/
 dist/
